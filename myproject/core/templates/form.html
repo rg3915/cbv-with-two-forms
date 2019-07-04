@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-6">
+
+      <form role="form">
+        <div class="form-group">
+           
+          <label for="titleBook">
+            Título do Livro
+          </label>
+          <input type="email" class="form-control" id="titleBook" />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Salvar
+        </button>
+      </form>
+
+    </div>
+
+    <div class="col-md-6">
+
+      <form role="form">
+        <div class="form-group">
+           
+          <label for="titleMovie">
+            Título do Filme
+          </label>
+          <input type="email" class="form-control" id="titleMovie" />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Salvar
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}
