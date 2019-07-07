@@ -14,10 +14,10 @@ class MultiFormCreateView(CreateView):
     query_param = 'form'
 
     def get_form(self, form_class=None):
-        breakpoint()
         if not form_class:
             param = self.request.GET.get(self.query_param)
-            form_class = self.form_classes.get(param, forms.Form)  # Safety fallback to empty form.
+            # Safety fallback to empty form.
+            form_class = self.form_classes.get(param, forms.Form)
         return super().get_form(form_class)
 
     def get_context_data(self, **kwargs):
@@ -33,4 +33,3 @@ class MyCreate(MultiFormCreateView):
     form_classes = {'bookForm': BookForm, 'movieForm': MovieForm}
     template_name = 'form.html'
     success_url = '/add/'
-
