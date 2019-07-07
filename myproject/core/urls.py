@@ -7,5 +7,5 @@ app_name = 'core'
 
 urlpatterns = [
     path('', v.Index.as_view(), name='index'),
-    path('add/', v.BookCreate.as_view(), name='add'),
+    path('add/', v.MyCreate.as_view(), name='add'),
 ]

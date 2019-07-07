@@ -7,13 +7,10 @@
 
     <div class="col-md-6">
 
-      <form role="form">
+      <form role="form" method="post" action=".?form=bookForm">
+          {% csrf_token %}
         <div class="form-group">
-           
-          <label for="titleBook">
-            Título do Livro
-          </label>
-          <input type="email" class="form-control" id="titleBook" />
+            {{ bookForm.title }}
         </div>
         <button type="submit" class="btn btn-primary">
           Salvar
@@ -24,13 +21,10 @@
 
     <div class="col-md-6">
 
-      <form role="form">
+      <form role="form" method="post" action=".?form=movieForm">
+          {% csrf_token %}
         <div class="form-group">
-           
-          <label for="titleMovie">
-            Título do Filme
-          </label>
-          <input type="email" class="form-control" id="titleMovie" />
+          {{ movieForm.title }}
         </div>
         <button type="submit" class="btn btn-primary">
           Salvar
